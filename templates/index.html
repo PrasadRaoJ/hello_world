@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App</title>
+
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    
+
+        <h1> Hello World</h1>
+
+        <div>
+
+            {% for article in articles %}
+
+            <h3>{{article.title}}</h3>
+            <i>{{article.created_at}}</i>
+            <img src="{{article.img.url}}" alt="" width="250" height="250"/>
+            <p>{{article.description}}</p>
+            
+
+              
+            {% endfor %}
+
+        </div>
+
+
+</body>
+</html>
